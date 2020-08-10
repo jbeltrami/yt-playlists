@@ -14,13 +14,21 @@ const Navbar = () => {
   const renderLogout = (someAuth) => {
     if (someAuth)
       return (
-        <li className='nav-item ml-auto'>
-          <NavLink to='/'>
-            <button className='btn btn-light' onClick={handleLogout}>
-              Logout
-            </button>
-          </NavLink>
-        </li>
+        <>
+          <li className='nav-item'>
+            <NavLink to='/create-list'>
+              <div className='nav-link'>Create a List</div>
+            </NavLink>
+          </li>
+
+          <li className='nav-item ml-auto'>
+            <NavLink to='/'>
+              <button className='btn btn-light' onClick={handleLogout}>
+                Logout
+              </button>
+            </NavLink>
+          </li>
+        </>
       );
 
     return (
